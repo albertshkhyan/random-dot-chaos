@@ -1,0 +1,48 @@
+/* Import Tailwind CSS layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+canvas {
+    display: block;
+}
+
+/* Styling for buttons */
+button {
+    @apply px-4 py-2 rounded-lg transition-all duration-200 ease-in-out;
+}
+
+button:hover {
+    @apply shadow-lg scale-105;
+}
+
+/* Custom utility for centered containers */
+.centered-container {
+    @apply flex items-center justify-center h-screen w-screen bg-secondary text-gray-900;
+}
+
+/* Custom animations (optional, based on Tailwind plugins) */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-10%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+}
+
+.bounce-animation {
+    animation: bounce 1s infinite;
+}
